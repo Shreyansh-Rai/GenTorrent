@@ -5,8 +5,9 @@ import dgram, { Socket } from 'dgram'
 import {Buffer} from 'buffer'
 import url from 'url'
 import {getPeers} from './tracker.mjs'
-const torrent = bencode.decode(fs.readFileSync('deb.torrent'));
+import { open } from './parser.mjs';
 
+const torrent = open('kali.torrent');
 console.log(torrent);
 console.log("tracker's url :", torrent.announce.toString('utf8'));
 

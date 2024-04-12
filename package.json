@@ -11,6 +11,7 @@
   "dependencies": {
     "bencode": "^0.8.0",
     "bencode-js": "^0.0.8",
+    "bignum": "^0.13.1",
     "bignumber.js": "^9.1.2"
   }
 }
