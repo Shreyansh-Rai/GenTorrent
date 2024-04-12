@@ -1,6 +1,4 @@
 'use strict';
-import fs from 'fs'
-import bencode from 'bencode'
 import dgram, { Socket } from 'dgram'
 import {Buffer} from 'buffer'
 import url from 'url'
@@ -56,7 +54,7 @@ function sendUdpExpBoff(socket,message,URL, callback=()=>{})
     const parsedURL = url.parse(URL, true);
     
     tryAgain(attempt);
-    
+
     function tryAgain(attempt)
     {
         if(attempt >= maxAttempts)
