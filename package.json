@@ -1,0 +1,16 @@
+{
+  "name": "gentor",
+  "version": "1.0.0",
+  "description": "Trying out my hand at making my own bittorrent client!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shreyansh Rai",
+  "license": "ISC",
+  "dependencies": {
+    "bencode": "^0.8.0",
+    "bencode-js": "^0.0.8",
+    "bignumber.js": "^9.1.2"
+  }
+}
