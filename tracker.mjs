@@ -180,8 +180,8 @@ function parseAnnounceResponse( announceResponse ){
         seeders: announceResponse.readUInt32BE(12),
         peers: group(announceResponse.slice(20), 6).map(address => {
           return {
-            // ip: `${address.readUInt8(0)}.${address.readUInt8(1)}.${address.readUInt8(2)}.${address.readUInt8(3)}`,
-            ip: address.slice(0, 4).join('.'), //TODO: Check alt out
+            ip: `${address.readUInt8(0)}.${address.readUInt8(1)}.${address.readUInt8(2)}.${address.readUInt8(3)}`,
+            // ip: address.slice(0, 4).join('.'), //TODO: ✅Check alt out
             port: address.readUInt16BE(4)
           }
         })

@@ -1,11 +1,7 @@
 'use strict';
-import {getPeers} from './tracker.mjs'
 import { open } from './parser.mjs';
+import { download } from './download.mjs';
 
-const torrent = open('kali.torrent');
-console.log(torrent);
-console.log("tracker's url :", torrent.announce.toString('utf8'));
+const torrent = open(process.argv[2]);
 
-getPeers(torrent,(peers)=>{
-    console.log("List of peers :", peers);
-})
+download(torrent);
