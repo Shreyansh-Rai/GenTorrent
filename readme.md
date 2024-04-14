@@ -1,4 +1,6 @@
-## Just an torrent
+## Just a torrent!
+
+### A Personal Project to learn more about the bit torrent protocol
 
 ### unofficial torrent specs : https://wiki.theory.org/BitTorrentSpecification
 ### BEP : https://www.bittorrent.org/beps/bep_0015.html
