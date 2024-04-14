@@ -112,6 +112,7 @@ export function buildRequest(payload){ //client asks
     req.writeUInt32BE(payload.index,5);
     req.writeUInt32BE(payload.begin,9);
     req.writeUInt32BE(payload.length,13);
+    return req;
 }
 
 export function buildPiece(payload){ //client serves
@@ -171,7 +172,11 @@ export function parseMsg(msg){
         };
         payload[id === 7 ? 'block' : 'length'] = rest;
     }
-
+    if(msg.length<4) return {
+        size : 3,
+        id : -1,
+        payload : [],
+    } ;
     return {
         size : msg.readInt32BE(0), //first 4 bytes always length
         id : id,
